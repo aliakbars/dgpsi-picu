@@ -10,50 +10,30 @@ by Ali A. Septiandri, Deyu Ming, F. A. Diaz De la O, Takoua Jendoubi, Samiran Ra
 **Results:** We propose using deep Gaussian process emulation with stochastic imputation, a methodology initially conceived to deal with computationally expensive models and uncertainty quantification, to solve the problem of handling missing values that naturally occur in critical care data. This method leverages longitudinal and cross-sectional information and provides uncertainty estimation for the imputed values. Our evaluation of a clinical dataset shows that the proposed method performs better than conventional methods, such as multiple imputations with chained equations (MICE), last-known value imputation, and individually fitted Gaussian Processes (GPs).
 
 ## Installation
-`dgpsi` currently requires Python version 3.9. The package can be installed via `pip`:
 
+If you have not installed the `uv` binary yet, use the standaloner installer:
 ```bash
-pip install dgpsi
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
-
-or `conda`:
-
+then run
 ```bash
-conda install -c conda-forge dgpsi
+uv sync
 ```
+to install all dependencies.
 
-However, to gain the best performance of the package or you are using an Apple Silicon computer, we recommend the following steps for the installation:
-* Download and install `Miniforge3` that is compatible to your system from [here](https://github.com/conda-forge/miniforge).
-* Run the following command in your terminal app to create a virtual environment called `dgp_si`:
+Note that to run the `dgpsi-dgp-*.ipynb`, you will need a different version of `dgpsi` that can be installed by following these [instructions](https://github.com/mingdeyu/DGP/tree/v2.0-beta2).
 
-```bash
-conda create -n dgp_si python=3.9.13 
-```
+## Citing This Work
 
-* Activate and enter the virtual environment:
-
-```bash
-conda activate dgp_si
-```
-
-* Install `dgpsi`:
-    - for Apple Silicon users, you could gain speed-up by switching to Apple's Accelerate framework:
-
-    ```bash
-    conda install dgpsi "libblas=*=*accelerate"
-    ```
-
-    - for Intel users, you could gain speed-up by switching to MKL:
-
-    ```bash
-    conda install dgpsi "libblas=*=*mkl"
-    ```
-
-    - otherwise, simply run:
-    ```bash
-    conda install dgpsi
-    ```
-
-## Demo and documentation
-Please see [demo](https://github.com/mingdeyu/DGP/tree/master/demo) for some illustrative examples of the method. The API reference 
-of the package can be accessed from [https://dgpsi.readthedocs.io](https://dgpsi.readthedocs.io).
+@article{10.1093/bioadv/vbaf305,
+    author = {Septiandri, Ali A and Ming, Deyu and DiazDelaO, F A and Jendoubi, Takoua and Ray, Samiran},
+    title = {Integrative Analysis and Imputation of Multiple Data Streams via Deep Gaussian Processes},
+    journal = {Bioinformatics Advances},
+    pages = {vbaf305},
+    year = {2025},
+    month = {11},
+    issn = {2635-0041},
+    doi = {10.1093/bioadv/vbaf305},
+    url = {https://doi.org/10.1093/bioadv/vbaf305},
+    eprint = {https://academic.oup.com/bioinformaticsadvances/advance-article-pdf/doi/10.1093/bioadv/vbaf305/65575896/vbaf305.pdf},
+}
