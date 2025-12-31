@@ -25,6 +25,7 @@ Note that to run the `dgpsi-dgp-*.ipynb`, you will need a different version of `
 
 ## Citing This Work
 
+```
 @article{10.1093/bioadv/vbaf305,
     author = {Septiandri, Ali A and Ming, Deyu and DiazDelaO, F A and Jendoubi, Takoua and Ray, Samiran},
     title = {Integrative Analysis and Imputation of Multiple Data Streams via Deep Gaussian Processes},
@@ -37,3 +38,4 @@ Note that to run the `dgpsi-dgp-*.ipynb`, you will need a different version of `
     url = {https://doi.org/10.1093/bioadv/vbaf305},
     eprint = {https://academic.oup.com/bioinformaticsadvances/advance-article-pdf/doi/10.1093/bioadv/vbaf305/65575896/vbaf305.pdf},
 }
+```
